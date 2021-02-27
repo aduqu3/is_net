@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Carrito de compras</title>
+    </head>
+    <body>
+        <div>
+            <h1>Carrito de compras</h1>
+        </div>
+        <div>
+            <a href="index.html">index</a>
+            <a href="galeria.html">galeria</a>
+            <a href="productos.html">productos</a>
+            <a href="nosotros.html">acerca de nosotros</a>
+            <a href="carrito.html">carrito</a>
+            <a href="registro.html">registro</a>
+        </div>
+        <div>
+            <table border="1">
+                <tr>
+                    <th>Producto</th>
+                    <th>Descripcion</th>
+                    <th>Stock</th>
+                    <th>Precio</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>orange</th>
+                    <th><img src="static/orange.jfif" alt="orange" width="50" height="50"></th>
+                    <th>
+                        <select name="cantidad">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" Selected="true">3</option> 
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </th>
+                    <th>$200</th>
+                    <th><button>Eliminar</button></th>
+                </tr>
+                <tr>
+                    <th>Total</th><th>-</th><th>-</th><th>-</th><th>$200</th>
+                </tr>
+            </table>
+            <form action="login.html" method="post">
+                <input type="submit" value="proceder a pagar">
+            </form>
+        </div>
+    </body>
+</html>
