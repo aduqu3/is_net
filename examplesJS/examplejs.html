@@ -1,0 +1,55 @@
+<html>
+    <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"> 
+    <meta content="utf-8" http-equiv="encoding">								
+        <title>El primer documento HTML</title>
+    </head>
+    <body>
+        <p>Inicio de JavaScript.</p>
+        <FORM>
+            <INPUT TYPE="button" NAME="Boton1" VALUE="Aceptar" onClick="Saludo()">
+            <INPUT TYPE="button" NAME="Boton2" VALUE="Cargar" onClick="cargar()">
+            <INPUT TYPE="button" NAME="Boton2" VALUE="CargarImagen" onClick="cargarImagen()">
+            <INPUT TYPE="button" NAME="Boton3" VALUE="CargarFormulario" onClick="cargarFormulario()">
+            <INPUT TYPE="button" NAME="Boton4" VALUE="obtenerValorHtml" onClick="obtenerValorHtml()">
+            <INPUT TYPE="text" id="text1" NAME="text1" VALUE="***">
+            <button type="button" onclick="cargarFormularioDos()">Escribir DIV</button><br>
+        </FORM>
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="cont5"></div>
+        <p title="texto hijo" id="899">****</p>
+    </body>
+</html>
+
+<script>
+    function milog(){
+        midatos="---";
+        console.log('El valor de mis datos es ' + midatos);
+    }
+    function Saludo(){
+        alert("Desde el boton");
+    }
+    function square(number){
+        console.log('Ejecuto la funcion square');
+        return number * number;
+    }
+    function cargar(){
+        var texto="1234567890"
+        document.getElementByID('div1').innerHTML="<p>texto texto texto</p><p>texto texto texto</p>";
+        document.getElementByID('text1').value=texto;
+    }
+    function cargarImagen(){
+        document.getElementByID('div2').innerHTML='<img src="../logo_unillanos.png">';
+    }
+    function cargarFormulario(){
+        var controles="<INPUT TYPE='button' id='buttonform1' Value='Aceptar' NAME='buttonform1'>"+
+            "<INPUT TYPE='text' id='textform1' Value='' NAME='textform1'>";
+        document.getElementByID('div1').innerHTML=controles;
+    }
+    function obtenerValorHtml(){
+        var valor = document.getElementById("text1").value;
+        console.log('valor de content es '+ valor);
+    }
+</script>
