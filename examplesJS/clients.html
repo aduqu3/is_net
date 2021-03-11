@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html lang="en" dir="ltr"> 
+  
+<head> 
+    <meta charset="utf-8"> 
+    <title> 
+        How to get values from html input 
+        array using JavaScript ? 
+    </title> 
+    <script src="js/functions.js"></script>
+</head> 
+  
+<body style="text-align: center;"> 
+      
+    <h1 style="color: rgb(12, 202, 216);"> 
+        Clientes
+    </h1> 
+     
+    <form action="">
+        <div>
+            <label for="firstname"><b>Nombres</b></label>
+            <input type="text" placeholder="Nombre" name="firstname" id="firstname" required>
+
+            <label for="lastname"><b>Apellidos</b></label>
+            <input type="text" placeholder="Apellidos" name="lastname" id="lastname" required>
+
+            <label for="id"><b>Identificacion</b></label>
+            <input type="text" placeholder="Identificacion" name="id" id="id" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Email" name="email" id="email" required>
+
+            <button type="button" onclick="testFill()">Cargar</button><br>
+        </div>
+        <div>
+            
+        </div>
+        
+    </form>
+
+    <!-- show js array in html table -->
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>City</th>
+        </tr>
+    
+        <script type="text/javascript">
+        for(id in persons)
+        {
+            document.write('<tr><td>' + id + '</td><td>' + persons[id].firstname + '</td></tr>');
+        }
+        </script>
+    </table>
+    <!-- end show js array -->
+
+    <!-- Another way to show the array -->
+    <p><ol id="demo"></ol></p>
+     <button type="button" name="button" onclick="myFunction()"> 
+         Submit 
+     </button> 
+    
+</body> 
+  
+</html> 
