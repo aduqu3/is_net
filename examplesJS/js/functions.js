@@ -6,6 +6,7 @@ var people = [
 ];
 
 function testFill() {
+    
     people.push({
         firstname: document.getElementById("firstname").value,
         lastname: document.getElementById("lastname").value,
@@ -15,6 +16,7 @@ function testFill() {
     });
     myFunction(people);
     console.log(people);
+    clearDefault();
 }
 
 function myFunction(item) {
@@ -45,4 +47,8 @@ function updateTable() {
             "<tr><td>" + id + "</td><td>" + people[id].firstname + "</td></tr>"
         );
     }
+}
+
+function clearDefault() {
+    document.getElementById("myForm").reset();
 }
