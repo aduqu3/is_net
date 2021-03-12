@@ -24,7 +24,6 @@ function testFill() {
     console.log(item);
 }
 
-<<<<<<< HEAD
 function myFunction(item) {
     let tr = document.createElement("tr");
     let c = 0;
@@ -35,12 +34,6 @@ function myFunction(item) {
         td.id = c;
         c += 1;
         tr.appendChild(td);
-=======
-function myFunction() {
-    var result = "";
-    people.forEach(function (item) {
-        result += "<li>" + item.id + " " + item.firstname + " " + item.lastname + " " + item.email;
->>>>>>> 795f47b5f49f00763150082396342f066c7b2e5f
     });
     document.getElementById("demo").appendChild(tr);
 }
