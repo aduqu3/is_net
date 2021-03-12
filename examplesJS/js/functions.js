@@ -5,7 +5,6 @@ function Saludo() {
 var people = [];
 
 function testFill() {
-    
     people.push({
         firstname: document.getElementById("firstname").value,
         lastname: document.getElementById("lastname").value,
@@ -49,9 +48,13 @@ function deleteRow() {
             index = c;
         }
     });
-    people.splice(index, 1);
-    console.log();
-    myFunction();
+    if (id === people[index].id) {
+        people.splice(index, 1);
+        console.log();
+        myFunction();
+    } else {
+        alert("La identificación indicada no existe");
+    }
 }
 
 function clearDefault() {
