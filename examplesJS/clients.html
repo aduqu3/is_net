@@ -2,10 +2,8 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8" />
-        <title>
-            Clientes
-        </title>
-        <link rel="stylesheet" href="css/style.css">
+        <title>Clientes</title>
+        <link rel="stylesheet" href="css/style.css" />
         <script src="js/functions.js"></script>
     </head>
 
@@ -50,19 +48,31 @@
                         id="email"
                         required
                     />
-
-                    
                 </div>
                 <div>
-                    <img src="https://www.vertexacc.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" height="200px" alt="photo" id="picture">
-                    <br>
+                    <img
+                        src="https://www.vertexacc.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png"
+                        height="200px"
+                        alt="photo"
+                        id="picture"
+                    />
+                    <br />
                     <label for="photo"><b>Foto (URL)</b></label>
-                    <input type="url" name="photo" placeholder="Foto" id="photo" />
-                    <button type="button" onclick="loadPhoto()">Cargar foto</button>
+                    <input
+                        type="url"
+                        name="photo"
+                        placeholder="Foto"
+                        id="photo"
+                    />
+                    <button type="button" onclick="loadPhoto()">
+                        Cargar foto
+                    </button>
                 </div>
                 <div>
                     <button type="button" onclick="testFill()">Cargar</button>
-                    <button type="button" onclick="deleteRow()">Eliminar</button>
+                    <button type="button" onclick="deleteRow()">
+                        Eliminar
+                    </button>
                     <br />
                 </div>
             </div>
@@ -70,15 +80,15 @@
 
         <!-- show js array in html table -->
         <div id="tb">
-        <table id="demo">
-            <tr>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Identificación</th>
-                <th>E-mail</th>
-                <th>Foto (URL)</th>
-            </tr>
-        </table>
-    </div>
+            <table id="demo">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Identificación</th>
+                    <th>E-mail</th>
+                    <th>Foto (URL)</th>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>

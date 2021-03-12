@@ -13,12 +13,10 @@ function testFill() {
         photo: document.getElementById("photo").value,
     });
     myFunction(people);
-    console.log(people);
     clearDefault();
 }
 
 function myFunction() {
-    console.log(people);
     let tmp = document.getElementById("demo");
     tmp.parentElement.removeChild(tmp);
     let table = document.createElement("table");
@@ -28,9 +26,18 @@ function myFunction() {
     people.forEach((i) => {
         let tr = document.createElement("tr");
         for (let key in i) {
+            console.log(key != "photo");
             let td = document.createElement("td");
-            td.innerText = i[key];
-            tr.appendChild(td);
+            if (key != "photo") {
+                td.innerText = i[key];
+                tr.appendChild(td);
+            } else {
+                let a = document.createElement("a");
+                a.href = i[key];
+                a.innerText = "URL";
+                td.appendChild(a);
+                tr.appendChild(td);
+            }
         }
         table.appendChild(tr);
         document.getElementById("tb").appendChild(table);
@@ -50,7 +57,6 @@ function deleteRow() {
     });
     if (id === people[index].id) {
         people.splice(index, 1);
-        console.log();
         myFunction();
         clearDefault();
     } else {
@@ -60,10 +66,11 @@ function deleteRow() {
 
 function clearDefault() {
     document.getElementById("myForm").reset();
-    document.getElementById("picture").src = "https://www.vertexacc.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png";
+    document.getElementById("picture").src =
+        "https://www.vertexacc.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png";
 }
 
-function loadPhoto(){
+function loadPhoto() {
     let img = document.getElementById("picture");
     let src = document.getElementById("photo").value;
     img.src = src;
