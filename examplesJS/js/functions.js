@@ -27,7 +27,6 @@ function testFill(){
     console.log(people);
 }
 
-
 function myFunction() {
     var result = "";
     people.forEach(function (item) {
