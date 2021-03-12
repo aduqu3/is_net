@@ -60,7 +60,7 @@ function deleteRow() {
 
 function clearDefault() {
     document.getElementById("myForm").reset();
-    document.getElementById("picture").src = "";
+    document.getElementById("picture").src = "https://www.vertexacc.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png";
 }
 
 function loadPhoto(){
