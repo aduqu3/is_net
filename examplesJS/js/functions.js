@@ -5,6 +5,7 @@ function Saludo() {
 var people = [];
 
 function testFill() {
+    
     people.push({
         firstname: document.getElementById("firstname").value,
         lastname: document.getElementById("lastname").value,
@@ -12,7 +13,9 @@ function testFill() {
         email: document.getElementById("email").value,
         photo: document.getElementById("photo").value,
     });
-    myFunction();
+    myFunction(people);
+    console.log(people);
+    clearDefault();
 }
 
 function myFunction() {
@@ -49,4 +52,8 @@ function deleteRow() {
     people.splice(index, 1);
     console.log();
     myFunction();
+}
+
+function clearDefault() {
+    document.getElementById("myForm").reset();
 }
