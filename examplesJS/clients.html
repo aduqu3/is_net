@@ -35,7 +35,7 @@
 
                     <label for="id"><b>Identificacion</b></label>
                     <input
-                        type="text"
+                        type="number"
                         placeholder="Identificacion"
                         name="id"
                         id="id"
@@ -44,7 +44,7 @@
 
                     <label for="email"><b>Email</b></label>
                     <input
-                        type="text"
+                        type="email"
                         placeholder="Email"
                         name="email"
                         id="email"
@@ -56,8 +56,10 @@
                     <br />
                 </div>
                 <div>
+                    <img src="" alt="photo" id="picture">
                     <label for="photo"><b>Foto</b></label>
                     <input type="url" name="photo" placeholder="Foto" id="photo" />
+                    <button type="button" onclick="loadPhoto()"></button>
                 </div>
             </div>
         </form>

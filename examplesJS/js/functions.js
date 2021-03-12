@@ -52,6 +52,7 @@ function deleteRow() {
         people.splice(index, 1);
         console.log();
         myFunction();
+        clearDefault();
     } else {
         alert("La identificación indicada no existe");
     }
@@ -59,4 +60,11 @@ function deleteRow() {
 
 function clearDefault() {
     document.getElementById("myForm").reset();
+    document.getElementById("picture").src = "";
+}
+
+function loadPhoto(){
+    let img = document.getElementById("picture");
+    let src = document.getElementById("photo").value;
+    img.src = src;
 }
