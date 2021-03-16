@@ -1,48 +1,46 @@
 <html>
-    <head>
-        <SCRIPT LANGUAGE="Javascript">
-            let datos = new Array(1,2,3,4,5); 
-            let global= Array (6,7,8,9,0);
-            let otros = ['1','2','3'];          
-            let varios1=Array (10);
-            
-            let varios2=[]
-            varios2.length=10;
-            varios1[0]='A';
-            varios1[1]='B';
-            varios1[2]='C';
-            varios1[3]=2;
-            varios1[4]=2;
-            varios1[10]=3; // se modifica el tamano del arreglo
-                     
-            console.log ("Tamano del arreglo datos: " + datos.length);
-            console.log ("Tamaño del arreglo global: " + global.length); 
-            console.log ("Tamaño del arreglo otros:" + otros.length);
-            console.log ("Tamano del arreglo varios1: " + varios1.length);
-            console.log ("Tamano del arreglo varios2: " + varios2.length) ;
-            
-            console.log("valor de varios[0] " + varios1[0]); 
-            console.log("valor de varios[4] " + varios1[4]); 
-            console.log("valor de varios[5] " + varios1[5]); 
-            console.log ("Elementos del array varios1:" + varios1);
-            console.log ("Indices del array varlos1: "+ Object.keys(varios1));
+  <head>
+    <script language="Javascript">
+      let datos = new Array(1, 2, 3, 4, 5);
+      let global = Array(6, 7, 8, 9, 0);
+      let otros = ["1", "2", "3"];
+      let varios1 = Array(10);
 
-            console.log("Elementos del array varios1");
+      let varios2 = [];
+      varios2.length = 10;
+      varios1[0] = "A";
+      varios1[1] = "B";
+      varios1[2] = "C";
+      varios1[3] = 2;
+      varios1[4] = 2;
+      varios1[10] = 3; // se modifica el tamano del arreglo
 
-            for(let i=0; i < varios1.length; i++){
-                console.log("many["+i+"]="+many1[i]);
-            }
+      console.log("Tamano del arreglo datos: " + datos.length);
+      console.log("Tamaño del arreglo global: " + global.length);
+      console.log("Tamaño del arreglo otros:" + otros.length);
+      console.log("Tamano del arreglo varios1: " + varios1.length);
+      console.log("Tamano del arreglo varios2: " + varios2.length);
 
-            console.log("Extraer elementos con el metodo forEach");
-            varios1.forEach(function(valor){
-                console.log(valor)
-            });
+      console.log("valor de varios[0] " + varios1[0]);
+      console.log("valor de varios[4] " + varios1[4]);
+      console.log("valor de varios[5] " + varios1[5]);
+      console.log("Elementos del array varios1:" + varios1);
+      console.log("Indices del array varlos1: " + Object.keys(varios1));
 
-            console.log("Extraer elementos con con el metodo forEach");
-            varios1.forEach(valor => console.log(valor));
-        </SCRIPT>
-    </head>
-    <body>
-        
-    </body>
+      console.log("Elementos del array varios1");
+
+      for (let i = 0; i < varios1.length; i++) {
+        console.log("many[" + i + "]=" + many1[i]);
+      }
+
+      console.log("Extraer elementos con el metodo forEach");
+      varios1.forEach(function (valor) {
+        console.log(valor);
+      });
+
+      console.log("Extraer elementos con con el metodo forEach");
+      varios1.forEach((valor) => console.log(valor));
+    </script>
+  </head>
+  <body></body>
 </html>
