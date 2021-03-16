@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <script language="Javascript"></script>
+    <title>El primer documento HTML</title>
+  </head>
+  <body>
+    <p id="p1" name="p1">Array con JavaScript</p>
+    <form id="f1" name="form1">
+      <button type="button" onclick="recorrerDOM()">recorrerDOM</button><br />
+      <button type="button" onclick="actualizarDOM()">modificarDOM</button
+      ><br />
+      <button type="button" onclick="EliminarDOM()">eliminarDOM</button><br />
+    </form>
+
+    <div id="div1" name="contenedor1"></div>
+    <p title="texto hijo" id="p2"></p>
+
+    <script>
+      function recorrerDOM() {
+        var valor = document.getElementById("p1").innerHTML;
+        console.log("Elemeto p1: " + valor);
+        valor = document.getElementById("f1").innerHTML;
+        console.log("Elemento f1: " + valor);
+        valor = document.getElementById("div1").innerHTML;
+        console.log("Elemento contenedor1: " + valor);
+
+        valor = document.getElementsByTagName("p");
+        console.log("Etiquetas de tipo p: ", valor);
+
+        for (var i = 0; i < valor.length; i++) {
+          var p = valor[i];
+          console.log("Detalle Etiquetas p[" + i + "]=" + p.innerHTML);
+        }
+      }
+    </script>
+  </body>
+</html>
