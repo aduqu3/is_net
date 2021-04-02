@@ -1,24 +1,62 @@
-<!doctype html>
-<meta charset="utf-8">
-<title>Ye olde labyrinthe game</title>
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>labyrinthe game</title>
 
 <style>
-*
-{
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: auto;
-	text-align: center;
-}
+  * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: auto;
+    text-align: center;
+  }
 
-#timer{white-space: pre; font-family: "Lucida Console",monospace; left: 40px; text-align: normal;}
+  #timer {
+    white-space: pre;
+    font-family: "Lucida Console", monospace;
+    left: 40px;
+    text-align: normal;
+  }
 </style>
 
 <body>
-<p id="timer">Step off the plate and your time starts counting...</p>
-<canvas width="1000" height="800" style="border: 2px solid black" oncontextmenu="return false;"></canvas>
-<p id="gameMessages">Just a sec, the minions are hard at work constructing your doom.</p>
+  <select id="labs">
+    <option value="1">lab1</option>
+    <option value="2">lab2</option>
+    <option value="3">lab3</option>
+  </select>
+  <button type="button" onclick="selectLab()">labyrinth 1</button>
 
-<script src="js/labyrinths.js"></script>
-<script src="js/game.js"></script>
+  <p id="timer">Step off the plate and your time starts counting...</p>
+  <canvas
+    width="1000"
+    height="800"
+    style="border: 2px solid black"
+    oncontextmenu="return false;"
+  ></canvas>
+  <p id="gameMessages">
+    Just a sec, the minions are hard at work constructing your doom.
+  </p>
+
+  <script src="js/labyrinths.js"></script>
+  <script src="js/game.js"></script>
+
+  <script type="text/javascript">
+    function selectLab() {
+      var lab = document.getElementById("labs").value;
+      switch (lab) {
+        case "1":
+          gameStart(labyrinth0);
+          break;
+        case "2":
+          gameStart(labyrinth1);
+          break;
+        case "3":
+          gameStart(labyrinth2);
+          break;
+        default:
+          console.log(lab);
+          break;
+      }
+    }
+  </script>
 </body>
