@@ -77,6 +77,7 @@ function gameStart(labyrinth_l) {
 
     // If the player is at the bottom right corner he has won
     if (playerCell == nRows * nCols - 1) {
+      document.getElementById("btn").disabled = false;
       window.removeEventListener("keydown", keyboardHandler, false);
       var nSteps = 0;
       var nBacktrack = 0;

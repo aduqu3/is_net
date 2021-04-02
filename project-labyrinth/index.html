@@ -24,7 +24,7 @@
     <option value="2">lab2</option>
     <option value="3">lab3</option>
   </select>
-  <button type="button" onclick="selectLab()">labyrinth 1</button>
+  <button id="btn" type="button" onclick="selectLab()">play</button>
 
   <p id="timer">Step off the plate and your time starts counting...</p>
   <canvas
@@ -42,6 +42,7 @@
 
   <script type="text/javascript">
     function selectLab() {
+      document.getElementById("btn").disabled = true;
       var lab = document.getElementById("labs").value;
       switch (lab) {
         case "1":
