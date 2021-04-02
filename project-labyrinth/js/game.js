@@ -33,7 +33,7 @@ function gameStart(labyrinth_l) {
 
   // Set up timer
   var timer = document.querySelector("#timer");
-  var timeLeft = 90;
+  var timeLeft = 0;
   var gameRunning = false;
 
   // Draw starting situation
@@ -102,7 +102,7 @@ function gameStart(labyrinth_l) {
       window.setTimeout(function () {
         timerTick();
       }, 1000);
-      timeLeft--;
+      timeLeft++;
 
       // Update timer display
       var msg = timeLeft + " Seconds so far";
