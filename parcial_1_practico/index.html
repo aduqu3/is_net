@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Andres Duque 160003812 -->
+<!-- hecho en netbeans -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Parcial 1 practico</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/functions.js"></script>
+  </head>
+
+  <body style="text-align: center">
+    <h1>Parcial 1 practico</h1>
+
+    <form id="myForm">
+      <div>
+        <div>
+          <label for="firstname"><b>Nombres</b></label>
+          <input
+            type="text"
+            placeholder="Nombre"
+            name="firstname"
+            id="firstname"
+            required
+          />
+
+          <label for="lastname"><b>Apellidos</b></label>
+          <input
+            type="text"
+            placeholder="Apellidos"
+            name="lastname"
+            id="lastname"
+            required
+          />
+
+          <label for="email"><b>Email</b></label>
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            id="email"
+            required
+          />
+          
+          <label for="pass"><b>Contrasena</b></label>
+          <input
+            type="password"
+            placeholder="Contrasena"
+            name="pass"
+            id="pass"
+            required
+          />
+        </div>
+
+        <label for="id"><b>identificador</b></label>
+          <input
+            type="number"
+            placeholder="id"
+            name="id"
+            id="id"
+            required
+          />
+
+        <div>
+          <button type="button" onclick="testFill()">Crear</button>
+          <button type="button" onclick="deleteRow()">Eliminar</button>
+          <br />
+        </div>
+      </div>
+    </form>
+
+    <!-- show js array in html table -->
+    <div id="tb">
+      <table id="demo">
+        <tr>
+          <th>ID</th>
+          <th>usuario (nombres y apellidos)</th>
+          <th>E-mail</th>
+          <th>Total Palabras</th>
+          <th>Palabras repetidas</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

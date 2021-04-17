@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <SCRIPT LANGUAGE="Javascript">
+        </script>
+    </head>
+    <body>
+        <h1> <b>Formularios en HTML</b> </h1>
+        <form id="form1"  >
+            <br>Usuario <input type="text" id="nombre" value="" />
+            <br>Clave de usuario<input type="password" id="pass">
+            <br>Tipo de usuario
+            <input type="radio" name="tipo" value="Estudiante">Estudiante
+            <input type="radio" name="tipo" value="Profesor">Profesor
+            <input type="radio" name="tipo" value="Funcionario">Funcionario																
+        </form>	
+        <button type="button" id="id1" onclick="mostrar()">Información Cookies</button>
+        <button type="button" id="id2" onclick="guardar()">Guardar información</button>						
+        <button type="button" id="id3" onclick="">Imprimir cookies</button>
+    </body>
+    
+    <script language="Javascript">
+        var newCookie = "user1=user1";
+        document.cookie = newCookie;
+        document.cookie = "user2=user2";
+        var expireDate = new Date(2022, 1, 1);
+        document.cookie = "username=John Smith; " + "expires=" + expireDate.toUTCString() + "; path=/";
+        document.cookie = "fav_food=rice; max_age=3600; path=/; samesite=strict ";
+        document.cookie = "fav_color=yellow; samesite=lax";
+
+        function mostrar() {
+            var listado = document.cookie;
+            console.log(listado);
+            alert(listado);
+        }
+
+        function guarda() {
+            var expiresdate = new Date(2021, 1, 1);
+            document.cookie = "username1=" + document.getElementById("nombre").value + ";" + "expires" + expiresdate.toUTCString() + "path=/"
+            document.cookie = "username1pass=" + document.getElementById("pass").value + ";" + "expires" + expiresdate.toUTCString() + "path=/"
+        }
+
+        function actualizar() {
+            var expiresdate = new Date(2021, 1, 1);
+            document.cookie = "username1=" + document.getElementById("nombre").value + ";" + "expires" + expiresdate.toUTCString() + "path=/"
+            document.cookie = "username1pass=" + document.getElementById("pass").value + ";" + "expires" + expiresdate.toUTCString() + "path=/"
+            mostrar();
+        }
+        document.addEventListener('DOMContentLoaded', function (event) {
+            mostrar();
+        });
+    </script>
+</html>
